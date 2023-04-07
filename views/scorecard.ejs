@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cricket Score App - Scorecard</title>
+    <%- include('./styles'); %>
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Scorecard</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Team</th>
+                    <th>Player</th>
+                    <th>Runs</th>
+                    <th>Balls</th>
+                    <th>Wickets</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% scores.forEach(score=> { %>
+                    <tr>
+                        <td>
+                            <%= score.teamName %>
+                        </td>
+                        <td>
+                            <%= score.playerName %>
+                        </td>
+                        <td>
+                            <%= score.runs %>
+                        </td>
+                        <td>
+                            <%= score.balls %>
+                        </td>
+                        <td>
+                            <%= score.wickets %>
+                        </td>
+                        <td><a href="/edit-score/<%= score._id %>">Edit</a></td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+        <div class="submit-btn">
+            <p><a class="home" href="/">Home</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

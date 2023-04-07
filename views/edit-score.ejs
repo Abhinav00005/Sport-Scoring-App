@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cricket Score App - Edit Score</title>
+    <%- include('./styles'); %>
+</head>
+
+<body>
+    <div class="player-box">
+        <h1>Edit Score</h1>
+        <form method="post" action="/update-score/<%= score._id %>">
+            <div class="form-field">
+                <label for="teamName">Team name:</label><br>
+                <input type="text" id="teamName" name="teamName" value="<%= score.teamName %>"><br>
+            </div>
+            <div class="form-field">
+                <label for="playerName">Player name:</label><br>
+                <input type="text" id="playerName" name="playerName" value="<%= score.playerName %>"><br>
+            </div>
+            <div class="form-field">
+                <label for="runs">Runs:</label><br>
+                <input type="number" id="runs" name="runs" value="<%= score.runs %>"><br>
+            </div>
+            <div class="form-field">
+                <label for="balls">Balls:</label><br>
+                <input type="number " id="balls" name="balls" value="<%= score.balls %>"><br>
+            </div>
+            <div class="form-field">
+                <label for="wickets">Wickets:</label><br>
+                <input type="number" id="wickets" name="wickets" value="<%= score.wickets %>"><br><br>
+            </div>
+            <div class="submit-btn">
+                <input class="submit" type="submit" value="Update">
+            </div>
+            <div class="submit-btn">
+                <p><a href="/">Home</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cricket Score App - Add a score</title>
+    <%- include('./styles'); %>
+</head>
+
+<body>
+    <div class="player-box">
+        <h1>Add a new Player</h1>
+        <form method="post" action="/add-score">
+            <div class="form-field">
+                <label for="teamName">Team name:</label><br>
+                <input type="text" id="teamName" name="teamName" required><br>
+            </div>
+            <div class="form-field">
+                <label for="playerName">Player name:</label><br>
+                <input type="text" id="playerName" name="playerName" required><br>
+            </div>
+            <div class="form-field">
+                <label for="runs">Runs:</label><br>
+                <input type="number" id="runs" name="runs" required><br>
+            </div>
+            <div class="form-field">
+                <label for="balls">Balls:</label><br>
+                <input type="number" id="balls" name="balls" required><br>
+            </div>
+            <div class="form-field">
+                <label for="wickets">Wickets:</label><br>
+                <input type="number" id="wickets" name="wickets" required><br><br>
+            </div>
+            <div class="submit-btn">
+                <input class="submit" type="submit" value="Submit">
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
